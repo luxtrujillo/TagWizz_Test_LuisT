@@ -40,12 +40,16 @@ public class TitleSceneController : MonoBehaviour
             {
                 SpacePressed();
             }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit(0);
+            }
         }
         else if (state == TitleSceneState.CREDITS_SCREEN)
         {
             if (UIController.GetCreditsPosition() < 112)
             {
-                UIController.MoveCredits(15);
+                UIController.MoveCredits(50);
             }
             if (Input.GetMouseButton(0))
             {
